@@ -17,7 +17,7 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LoginView'),
+        title: const Text('LOGIN'),
         centerTitle: true,
       ),
       body: ListView(

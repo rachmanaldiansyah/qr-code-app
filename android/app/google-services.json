@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702949213827",
+    "project_id": "qrcode-project-c01bf",
+    "storage_bucket": "qrcode-project-c01bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702949213827:android:752ac62c095ab6483ebdb6",
+        "android_client_info": {
+          "package_name": "com.codingsloth.qr_code"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWX0iIm1940rmxm2FVc5VhaYDCKdkLdaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702949213827:android:3ad14abed72b1ed03ebdb6",
+        "android_client_info": {
+          "package_name": "com.codingsloth.qrcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWX0iIm1940rmxm2FVc5VhaYDCKdkLdaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

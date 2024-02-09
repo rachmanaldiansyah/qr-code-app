@@ -63,7 +63,29 @@ class AddProductView extends GetView<AddProductController> {
           ),
           const SizedBox(height: 25),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              if (controller.isLoading.isFalse) {
+                if (codeProductController.text.isNotEmpty &&
+                    nameProductController.text.isNotEmpty &&
+                    qtyProductController.text.isNotEmpty) {
+                  controller.isLoading(true);
+                  Map<String, dynamic> result = await controller.addProduct({
+                    "code": codeProductController.text,
+                    "name_product": nameProductController.text,
+                    "qty": int.tryParse(qtyProductController.text) ?? 0,
+                  });
+                  controller.isLoading(false);
+
+                  Get.back();
+                  Get.snackbar(
+                    result["error"] == true ? "Error" : "Success",
+                    result["message"],
+                  );
+                } else {
+                  Get.snackbar("Error", "Data produk wajib diisi");
+                }
+              }
+            },
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(9),

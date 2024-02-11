@@ -50,7 +50,7 @@ class ProductsView extends GetView<ProductsController> {
                 ),
                 child: InkWell(
                   onTap: () {
-                    Get.toNamed(Routes.DETAIL_PRODUCT);
+                    Get.toNamed(Routes.DETAIL_PRODUCT, arguments: products);
                   },
                   borderRadius: BorderRadius.circular(9),
                   child: Container(

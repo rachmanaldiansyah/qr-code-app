@@ -50,7 +50,7 @@ class HomeView extends GetView<HomeController> {
             case 3:
               title = "Katalog Produk";
               icon = Icons.document_scanner_rounded;
-              onTap = () => print("Ini adalah aksi untuk buka pdf");
+              onTap = () => controller.downloadCatalog();
               break;
           }
 

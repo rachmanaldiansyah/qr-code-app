@@ -13,7 +13,8 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.5.0
-  open_file: ^3.3.0
+  # open_file: ^3.3.0
+  open_file_plus: ^3.4.0
   path_provider: ^2.1.0
   pdf: ^3.3.0
   qr_flutter: ^4.0.0

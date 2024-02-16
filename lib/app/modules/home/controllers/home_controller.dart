@@ -190,21 +190,26 @@ class HomeController extends GetxController {
     await OpenFile.open(file.path);
   }
 
-  Future<Map<String, dynamic>> getProductById(String id) async {
+  Future<Map<String, dynamic>> getProductById(String code) async {
     try {
-      var result = await firestore.collection("products").doc(id).get();
+      var result = await firestore
+          .collection("products")
+          .where("code", isEqualTo: code)
+          .get();
 
-      if (result.data() == null) {
+      if (result.docs.isEmpty) {
         return {
           "error": true,
           "message": "Tidak mendapatkan produk ini di database",
         };
       }
 
+      Map<String, dynamic> data = result.docs.first.data();
+
       return {
         "error": false,
         "message": "Berhasil mendapatkan detail produk dari produk code ini",
-        "data": ProductsModel.fromJson(result.data()!)
+        "data": ProductsModel.fromJson(data)
       };
     } catch (e) {
       return {
